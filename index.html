@@ -5,6 +5,10 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>006 Stats preview card component</title>
     <script type="module" src="./style.scss"></script>
@@ -22,14 +26,37 @@
   <body>
     <main>
       <article class="card">
-  Get insights that help your business grow.
-
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.
-
-  10k+ companies
-  314 templates
-  12m+ queries
+        <div class="card__img-wrap">
+          <picture>
+            <source media="(min-width: 600px)" srcset="./images/image-header-desktop.jpg" />
+            <img
+              class="card__img"
+              src="./images/image-header-mobile.jpg"
+              alt="Three people working together at the table"
+            />
+          </picture>
+        </div>
+        <div class="card__content">
+          <h1 class="card__title">Get <em>insights</em> that help your business grow.</h1>
+          <p class="card__desc">
+            Discover the benefits of data analytics and make better decisions regarding revenue, customer experience,
+            and overall efficiency.
+          </p>
+          <div class="card__stats">
+            <div class="card__stat">
+              <div class="card__stat__number">10k+</div>
+              <div class="card__stat__label">Companies</div>
+            </div>
+            <div class="card__stat">
+              <div class="card__stat__number">314</div>
+              <div class="card__stat__label">Templates</div>
+            </div>
+            <div class="card__stat">
+              <div class="card__stat__number">12M+</div>
+              <div class="card__stat__label">Queries</div>
+            </div>
+          </div>
+        </div>
       </article>
       <div class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
