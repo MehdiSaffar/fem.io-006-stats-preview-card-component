@@ -1,0 +1,99 @@
+@use './reset';
+
+:root {
+  --clr-primary-100: hsl(225, 100%, 94%);
+  --clr-accent-500: hsl(245, 75%, 52%);
+
+  --clr-neutral-100: hsl(225, 100%, 98%);
+  --clr-neutral-300: hsl(224, 23%, 55%);
+  --clr-neutral-900: hsl(223, 47%, 23%);
+
+  --fs-body: 16px;
+  --ff-body: 'Red Hat Display', system-ui, sans-serif;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-black: 900;
+}
+
+html,
+body {
+  height: unset;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  font-size: var(--fs-body);
+  font-family: var(--ff-body);
+  font-weight: var(--fw-medium);
+  background-color: var(--clr-primary-100);
+  color: var(--clr-neutral-300);
+  padding: 1.5rem;
+}
+
+* {
+  transition: background-color 250ms ease, color 250ms ease;
+}
+
+a {
+  color: var(--clr-accent-500);
+  &:is(:hover, :focus) {
+    color: #766cf1;
+  }
+  cursor: pointer;
+}
+
+.card {
+  max-width: 450px;
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: white;
+  text-align: center;
+
+  box-shadow: 0px 17px 19px -6px #c8d5ff;
+
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    display: grid;
+    gap: 1.2rem;
+    padding: 1.7rem;
+  }
+
+  &__title {
+    font-weight: var(--fw-black);
+    color: var(--clr-neutral-900);
+  }
+
+  .btn {
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    border: 0;
+    font-weight: var(--fw-bold);
+    cursor: pointer;
+
+    &--primary {
+      background-color: var(--clr-accent-500);
+      color: white;
+      box-shadow: 0px 17px 19px -6px rgba(59,41,234,0.46);
+
+      &:is(:hover, :focus) {
+        background-color: #766cf1;
+      }
+    }
+
+    &--ghost {
+      background-color: transparent;
+      color: var(--clr-neutral-300);
+
+      &:is(:hover, :focus) {
+        color: var(--clr-neutral-900);
+      }
+    }
+  }
+}
